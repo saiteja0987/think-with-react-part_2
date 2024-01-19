@@ -3,14 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>think-withreact</title>
+    <title>think with react part2</title>
 </head>
 <body>
-    <!-- Create a div to setup a react container -->
    <div id="react-container"></div>
-    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
-    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
-   <!-- Include the react element -->
-    <script src="./app.js"></script>
+   <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+   <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+   <script  src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+   
+   <script type="text/babel">
+        class ReactContainer extends React.Component{
+      render(){
+          return (
+          <div>Hello! Welcome to Kalvium   
+             <div>Let's rock and roll. This is babel</div>
+         </div> )
+      };  
+  }
+const container = document.getElementById('react-container');
+ReactDOM.render(<ReactContainer/>,container); 
+   </script>
 </body>
 </html>
